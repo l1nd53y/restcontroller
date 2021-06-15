@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     User user = new User("Lindsey");
 
-    @GetMapping
-    public User findName() {
-        return this.user;
+    @GetMapping()
+    public String findName() {
+        return user.getName();
     }
 }
